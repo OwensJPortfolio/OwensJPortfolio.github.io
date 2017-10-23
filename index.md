@@ -6,6 +6,7 @@ layout: default
   Let's see if this works!
 </h1>
 
+## Header 2
 <!--
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
