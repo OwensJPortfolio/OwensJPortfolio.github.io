@@ -1,12 +1,4 @@
-<!--
----
-layout: default
----
 
-<h1>
-  Let's see if this works!
-</h1>
--->
 <link rel="shortcut icon" href="TemplateData/favicon.ico">
 <link rel="stylesheet" href="TemplateData/style.css">
 <script src="TemplateData/UnityProgress.js"></script>  
