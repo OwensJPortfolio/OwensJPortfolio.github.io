@@ -6,28 +6,25 @@ layout: default
   Let's see if this works!
 </h1>
 
-<canvas id="glCanvas" width="100%" height="100%">
-  
-</canvas>
-
-<script type="text/javascript">
-  main();
-
-  function main() {
-    const canvas = document.querySelector("#glcanvas");
-    const gl = canvas.getContext("webgl");
-
-    if(!gl){
-      alert("Unable to initialize WebGL. Your browser or machine may not support it.");
-      return;
-    }
-
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  }
+<link rel="shortcut icon" href="TemplateData/favicon.ico">
+<link rel="stylesheet" href="TemplateData/style.css">
+<script src="TemplateData/UnityProgress.js"></script>  
+<script src="Build/UnityLoader.js"></script>
+<script>
+  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Builds.json", {onProgress: UnityProgress});
 </script>
-## Header 2
+
+<div class="webgl-content">
+  <div id="gameContainer" style="width: 100%; height: 100%"></div>
+  <div class="footer">
+    <div class="webgl-logo"></div>
+    <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+    <div class="title">Josh</div>
+  </div>
+</div>
 <!--
+## Header 2
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](another-page).
